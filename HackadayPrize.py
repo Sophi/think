@@ -25,9 +25,10 @@ class StdOutListener(tweepy.StreamListener):
         if username != our_own_id:
             print(username) # just so we know it's working
         try:
-            sleepTime = random.randrange(30, 100, 2)  #RT at diff times
+            sleepTime = random.randrange(30, 1000, 2)  #RT at diff times
             print(sleepTime)
             time.sleep(sleepTime) #seconds
+            print("I'm RTing")
             api.retweet(doTweet)
         except tweepy.TweepError as errorCode:
             print(errorCode)
