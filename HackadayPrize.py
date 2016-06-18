@@ -48,7 +48,7 @@ class StdOutListener(tweepy.StreamListener):
 def main():
     listener = StdOutListener() 
     stream = tweepy.Stream(auth, listener)    
-    print ("Streaming started...")
+    print (start_time, "Streaming started...")
 
     try:
       stream.filter(track=['#HackadayPrize','HackadayIO'])        
