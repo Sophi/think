@@ -2,7 +2,6 @@ import tweepy, time, sys, json, os, random
 from tweepy import OAuthHandler
 from tweepy import Stream
 from tweepy.streaming import StreamListener
-from multiprocessing import Pool #run multi threads at once
 
 CONSUMER_KEY = os.environ['CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
@@ -48,8 +47,7 @@ class StdOutListener(tweepy.StreamListener):
     
 def main():
     listener = StdOutListener() 
-    stream = tweepy.Stream(auth, listener)
-    
+    stream = tweepy.Stream(auth, listener)    
     print ("Streaming started...")
 
     try:
