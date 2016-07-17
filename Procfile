@@ -1,1 +1,1 @@
-worker: python HackadayPrize.py
+worker: python3 HackadayPrize.py
